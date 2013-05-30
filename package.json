@@ -1,0 +1,29 @@
+{
+  "author": "Samuel Hough + Chris Abrams",
+  "name": "nodecopter-nodebot",
+  "title": "NodeCopter and Nodebot",
+  "description": "NodeCopter and Nodebot",
+  "version": "0.0.1",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "main": "./server.js",
+  "dependencies": {
+    "johnny-five": "0.6.2",
+    "ar-drone": "0.1.0"
+  },
+
+  "devDependencies": {
+    "docco": "0.6.2",
+    "expect.js": "0.2.0",
+    "grunt": "0.4.1",
+    "grunt-contrib-clean": "0.4.0",
+    "grunt-contrib-copy": "0.4.0",
+    "mocha": "1.8.2"
+  }
+}
