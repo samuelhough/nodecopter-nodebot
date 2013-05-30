@@ -1,9 +1,5 @@
 module.exports = class Arduino
 
-  constructor: ->
-    @five = require("johnny-five")
-    @board = new @five.Board()
-
   createAccelSensor: (pin, axis) ->
 
     # Create a new `sensor` hardware instance.
@@ -50,6 +46,9 @@ module.exports = class Arduino
       #console.log "changed args", arguments
 
   start: ->
+    @five = require("johnny-five")
+    @board = new @five.Board()
+
     @board.on "ready", =>
 
       @createAccel("I0", "X")
