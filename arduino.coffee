@@ -7,7 +7,7 @@ module.exports = class Arduino
   createAccelSensor: (pin, axis) ->
 
     # Create a new `sensor` hardware instance.
-    sensor = new five.Sensor(
+    sensor = new @five.Sensor(
       pin: pin
       freq: 750
     )
@@ -15,7 +15,7 @@ module.exports = class Arduino
     # Inject the `sensor` hardware into
     # the Repl instance's context;
     # allows direct command line access
-    board.repl.inject sensor: sensor
+    @board.repl.inject sensor: sensor
 
     sensor.scale([0, 100]).on("read", ->
       console.log axis, @normalized, @scaled
@@ -34,7 +34,7 @@ module.exports = class Arduino
     # Inject the `sensor` hardware into
     # the Repl instance's context;
     # allows direct command line access
-    board.repl.inject sensor: sensor
+    @board.repl.inject sensor: sensor
 
     sensor.scale([0, 100]).on("read", ->
       console.log "light", @normalized, @scaled
