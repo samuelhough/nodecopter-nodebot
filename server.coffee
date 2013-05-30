@@ -1,1 +1,1 @@
-var arduino = require('arduino');
+arduino = require('arduino');
